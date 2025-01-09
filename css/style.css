@@ -37,4 +37,59 @@ background: #038ade;
     color: #fff;
     text-decoration:none;
     cursor:pointer;
+} 
+    /*dashboard  */
+
+
+header{
+    background: #038;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 20px
+}
+/* Mengatur lebar menu 20% dengan background hitam */
+aside{
+    flex: 20%;
+    background: #222;
+}
+/* Mengatur lebar konten utama 80% dengan background putih */
+section.main{
+    flex:80%;
+    background: #fff;
+    min-height: 530px;
+    padding: 15px 20px;
+}
+/* Mengatur footer dengan background abu-abu dan teks di tengah */
+footer{
+    background: #ccc;
+    color: #555;
+    padding: 20px;
+    text-align: center;
+}
+/* Mengatur layout pada layar kecil(responsive) */
+    @media (max-width : 700px){
+    .container{
+        flex-direction: column;
+    }
+} 
+/* Navigasi */
+/* Membuang padding tag <ul> */
+.menu{
+    padding:o;
+}
+/* Menambah border bawah tag <li> */
+.menu li{
+    border-bottom:1px dotted #444;
+}
+/* Mengatur desain menu yang dibuat dengan tag a */
+.menu a {
+    display: block;
+    padding:20px 20px;
+    list-style: none;
+    color: #fff;
+    text-decoration:none;
+}
+/* Mengganti background menu ketika ditunjuk mouse */
+.menu a:hover{
+    background: #000;
 }
