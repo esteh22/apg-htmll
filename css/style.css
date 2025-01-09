@@ -1,8 +1,8 @@
 *{
-    box-sizing: border box ;
+    box-sizing: border-box;
 }
 
-.body{
+body{
 font-family:Arial;
 margin:0;
 background: #038ade;
@@ -25,13 +25,13 @@ background: #038ade;
     padding-bottom: 20px;
     margin : 0 0 20px;
 }
-.input, select{
+input, select{
     width: 100%;
     padding: 15px 20px;
-    margin: 8px o;
+    margin: 8px 0;
     border: 1px solid #ccc ;
 }
-.input[type=submit]{
+input[type=submit]{
     background-color: #038ade;
     border: none;
     color: #fff;
@@ -42,7 +42,7 @@ background: #038ade;
 
 
 header{
-    background: #038;
+    background: #038ade;
     color: #fff;
     padding: 15px 20px;
     font-size: 20px
@@ -67,29 +67,88 @@ footer{
     text-align: center;
 }
 /* Mengatur layout pada layar kecil(responsive) */
-    @media (max-width : 700px){
+@media (max-width : 700px){
     .container{
         flex-direction: column;
     }
-} 
+}  
 /* Navigasi */
 /* Membuang padding tag <ul> */
 .menu{
-    padding:o;
+    padding:0;
 }
 /* Menambah border bawah tag <li> */
 .menu li{
-    border-bottom:1px dotted #444;
+    border-bottom: 1px solid dotted #444;
+    list-style: none;
 }
 /* Mengatur desain menu yang dibuat dengan tag a */
 .menu a {
     display: block;
-    padding:20px 20px;
+    padding: 20px 20px;
     list-style: none;
     color: #fff;
-    text-decoration:none;
+    text-decoration: none;
 }
 /* Mengganti background menu ketika ditunjuk mouse */
 .menu a:hover{
     background: #000;
 }
+/* ================== */
+/* Style Halaman Form */
+/* ================== */
+
+
+/* Mengatur form-grup agar tidak terpengaruh float */
+.form-group{
+    clear: both;
+}
+
+
+/* Mengatur lebar lebar 30% dengan teks bold */
+.form-group label{
+    display : block;
+    padding : 15px 0;
+    float: left;
+    width: 30%;
+    font-weight: bold;
+}
+
+
+/* mengatur lebar .input 50% dan sejajar dengan label*/
+.form-group .input{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+/* Mengatur input radio, tombol submit dan tombol reset */
+input[type=radio]{
+    width: 50px;
+}
+.tombol.simpan{
+    background: #038ade;
+}
+.tombol.reset{
+    background: #fb8307;
+}
+
+
+/* membuat tampilan form menumpuk pada layar kecil*/
+@media (max-width: 700px){
+    .form-group label, .form-group .input{
+        width: 100%
+    }
+}
+
+/* style tabel */
+.tombol{
+    display: inline-block;
+    max-width: 150px;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    background: #038ade;
+    cursor: pointer;
+}
+
